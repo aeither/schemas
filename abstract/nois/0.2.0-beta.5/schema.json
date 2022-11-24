@@ -1,0 +1,159 @@
+{
+  "contract_name": "nois",
+  "contract_version": "0.2.0-beta.5",
+  "idl_version": "1.0.0",
+  "instantiate": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InstantiateMsg",
+    "description": "Init msg",
+    "type": "object",
+    "required": [
+      "nois_proxy_addr"
+    ],
+    "properties": {
+      "nois_proxy_addr": {
+        "description": "Address of the service provider which receives the fee.",
+        "type": "string"
+      }
+    },
+    "additionalProperties": false
+  },
+  "execute": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ExecuteMsg",
+    "oneOf": [
+      {
+        "type": "object",
+        "required": [
+          "randomness"
+        ],
+        "properties": {
+          "randomness": {
+            "type": "object",
+            "required": [
+              "job_id"
+            ],
+            "properties": {
+              "job_id": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "query": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "QueryMsg",
+    "oneOf": [
+      {
+        "description": "Returns [`StateResponse`]",
+        "type": "object",
+        "required": [
+          "state"
+        ],
+        "properties": {
+          "state": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "description": "GetCount returns the current count as a json-encoded number Returns [`JobOutcomeResponse`]",
+        "type": "object",
+        "required": [
+          "job_outcome"
+        ],
+        "properties": {
+          "job_outcome": {
+            "type": "object",
+            "required": [
+              "job_id"
+            ],
+            "properties": {
+              "job_id": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      },
+      {
+        "description": "Returns [`JobHistoryResponse`]",
+        "type": "object",
+        "required": [
+          "job_history"
+        ],
+        "properties": {
+          "job_history": {
+            "type": "object",
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "migrate": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "MigrateMsg",
+    "description": "Migrate msg",
+    "type": "object",
+    "additionalProperties": false
+  },
+  "sudo": null,
+  "responses": {
+    "job_history": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobHistoryResponse",
+      "type": "object",
+      "required": [
+        "jobs"
+      ],
+      "properties": {
+        "jobs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "job_outcome": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "JobOutcomeResponse",
+      "type": "object",
+      "required": [
+        "outcome"
+      ],
+      "properties": {
+        "outcome": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "state": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "StateResponse",
+      "type": "object",
+      "required": [
+        "nois_proxy_addr"
+      ],
+      "properties": {
+        "nois_proxy_addr": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
