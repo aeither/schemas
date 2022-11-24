@@ -2,5 +2,7 @@
   "name": "Nois",
   "description": "Retrieve randomness from Nois blockchain.",
   "docs": "https://docs.abstract.money/modules/nois",
-  "website": "https://abstract.money"
+  "website": "https://abstract.money",
+  "type": "extension",
+  "icon": "RiStockLine"
 }
