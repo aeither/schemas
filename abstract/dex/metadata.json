@@ -1,0 +1,6 @@
+{
+  "name": "DEX",
+  "description": "Swap assets on different dexes directly from your vault.",
+  "docs": "https://docs.abstract.money/creating-your-first-abstract-os/modules/dex-api",
+  "website": "https://abstract.money"
+}
