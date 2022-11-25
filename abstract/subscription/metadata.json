@@ -1,0 +1,9 @@
+{
+  "name": "Subscription",
+  "description": "Subscribe?",
+  "docs": "https://docs.abstract.money",
+  "website": "https://abstract.money",
+  "type": "app",
+  "icon": "RiCoinsLine",
+  "disabled": true
+}

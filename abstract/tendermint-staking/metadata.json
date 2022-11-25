@@ -2,7 +2,7 @@
   "name": "Staking",
   "description": "Delegate from your OS's vault to validators to earn rewards.",
   "docs": "https://docs.abstract.money",
-  "website": "https://abstract.money"
+  "website": "https://abstract.money",
   "type": "extension",
-"icon": "RiCoinsLine"
+  "icon": "RiCoinsLine"
 }
