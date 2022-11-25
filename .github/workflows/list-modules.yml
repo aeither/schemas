@@ -1,0 +1,58 @@
+name: List modules
+on:
+  push:
+    tags-ignore:
+      - '*'
+    branches:
+      - 'mainline'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  list-modules:
+    runs-on: self-hosted
+    env:
+      SEARCH_PATH: .
+      MAX_DEPTH: 2
+    outputs:
+      module-tree: ${{ steps.generate-tree.outputs.tree }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: generate-tree
+        uses: adairrr/file-tree-to-json-action@v1-alpha
+        with:
+          search-path: ${{ env.SEARCH_PATH }}
+          max-depth: ${{ env.MAX_DEPTH }}
+          only-dirs: true
+          end-with-array: true
+
+
+  write-modules:
+    needs: list-modules
+    runs-on: self-hosted
+    env:
+      OUT_FILE: modules.json
+    steps:
+      - uses: actions/checkout@v3
+      - name: Write modules output file
+        uses: "DamianReeves/write-file-action@master"
+        with:
+          path: ${{ env.OUT_FILE }}
+          write-mode: overwrite
+          contents: ${{needs.list-modules.outputs.module-tree}}
+
+      - name: Compare the modules output file
+        id: diff
+        run: |
+          if [ "$(git diff --ignore-space-at-eol ${{ env.OUT_FILE }} | wc -l)" -eq "0" ]; then
+            echo "No changes detected in ${{ env.OUT_FILE }}."
+            exit 0
+          fi
+
+      - name: Commit & Push
+        uses: Andro999b/push@v1.3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+          force: true
+          message: 'Update modules list.'
