@@ -1,0 +1,14 @@
+{
+  "abstract": [
+    "dex",
+    "etf",
+    "ibc-client",
+    "manager",
+    "nois",
+    "proxy",
+    "subscription",
+    "tendermint-staking",
+    "version_control",
+    "vesting"
+  ]
+}
