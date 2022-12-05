@@ -1,0 +1,8 @@
+{
+  "name": "Cw20 Merkle Airdrop",
+  "description": "This is a merkle airdrop smart contract that works with cw20 token specification Mass airdrop distributions made cheap and efficient.",
+  "docs": "https://docs.cosmwasm.com/cw-tokens/cw20-merkle-airdrop/",
+  "website": "https://github.com/CosmWasm/cw-tokens/tree/main/contracts/cw20-merkle-airdrop",
+  "type": "perk",
+  "icon": "GiTrade"
+}
