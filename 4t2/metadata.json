@@ -1,0 +1,9 @@
+{
+  "name": "Cw Staking",
+  "description": "Stake stake stake",
+  "docs": "",
+  "website": "https://fortytwo.finance",
+  "type": "api",
+  "icon": "GiTrade",
+  "enabled": true
+}
