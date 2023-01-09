@@ -4,5 +4,6 @@
   "docs": "https://docs.abstract.money/creating-your-first-abstract-os/modules/dex-api",
   "website": "https://abstract.money",
   "type": "api",
-  "icon": "GiTrade"
+  "icon": "GiTrade",
+  "enabled": true
 }

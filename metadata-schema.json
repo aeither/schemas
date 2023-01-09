@@ -1,0 +1,92 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "$id": "https://example.com/example.json",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "name",
+    "description",
+    "docs",
+    "website",
+    "type",
+    "icon"
+  ],
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "",
+      "title": "The name Schema",
+      "examples": [
+        "Version Control"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "default": "",
+      "title": "The description Schema",
+      "examples": [
+        "Manage versions of smart-contracts on-chain"
+      ]
+    },
+    "docs": {
+      "type": "string",
+      "default": "",
+      "title": "The docs Schema",
+      "examples": [
+        "https://docs.rs/abstract-os/latest/abstract_os/os_factory/index.html"
+      ]
+    },
+    "website": {
+      "type": "string",
+      "default": "",
+      "title": "The website Schema",
+      "examples": [
+        "https://abstract.money"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "app",
+        "api",
+        "native",
+        "core",
+        "standalone"
+      ],
+      "default": "",
+      "title": "Type of module",
+      "examples": [
+        "app",
+        "api"
+      ]
+    },
+    "icon": {
+      "type": "string",
+      "default": "",
+      "title": "ReactIcon",
+      "examples": [
+        "GiTrade"
+      ]
+    },
+    "enabled": {
+      "type": "boolean",
+      "default": false,
+      "title": "Whether your module is enabled in the UI",
+      "examples": [
+        true
+      ]
+    }
+  },
+  "examples": [
+    {
+      "name": "Dex",
+      "description": "Interact with multiple dexes",
+      "docs": "https://docs.rs/abstract-os/latest/abstract_os/dex/index.html",
+      "website": "https://abstract.money",
+      "type": "api",
+      "icon": "GiTrade",
+      "enabled": true
+    }
+  ]
+}

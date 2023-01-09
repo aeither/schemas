@@ -1,0 +1,15 @@
+{
+  "name": "schemas",
+  "version": "1.0.0",
+  "description": "Abstract Module schemas",
+  "repository": "https://github.com/Abstract-OS/schemas",
+  "author": "adairrr <32375605+adairrr@users.noreply.github.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "ajv-cli": "^5.0.0"
+  },
+  "scripts": {
+    "validate-metadatas": "ajv --spec=draft2019 validate -s metadata-schema.json -d './**/metadata.json'"
+  }
+}

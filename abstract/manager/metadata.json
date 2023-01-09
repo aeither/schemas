@@ -3,7 +3,7 @@
   "description": "The manager contract is the endpoint for interacting with an OS.",
   "docs": "https://docs.abstract.money/building-on-abstract/native-contracts#manager",
   "website": "https://abstract.money",
-  "type": "app",
+  "type": "core",
   "icon": "RiCoinsLine",
-  "disabled": true
+  "enabled": false
 }

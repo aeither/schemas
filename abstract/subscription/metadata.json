@@ -5,5 +5,5 @@
   "website": "https://abstract.money",
   "type": "app",
   "icon": "RiCoinsLine",
-  "disabled": true
+  "enabled": false
 }
