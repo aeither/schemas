@@ -1,0 +1,9 @@
+{
+  "name": "Cw4 Stake",
+  "description": "",
+  "docs": "",
+  "website": "https://docs.cosmwasm.com/cw-plus/0.9.0/cw4/cw4-stake-spec",
+  "type": "standalone",
+  "icon": "GiTrade",
+  "enabled": true
+}

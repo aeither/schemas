@@ -1,0 +1,9 @@
+{
+  "name": "Cw3 Fixed Multisig",
+  "description": "",
+  "docs": "",
+  "website": "https://docs.cosmwasm.com/cw-plus/0.9.0/cw3/cw3-fixed-spec",
+  "type": "standalone",
+  "icon": "GiTrade",
+  "enabled": true
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Cw1 Whitelist",
+  "description": "",
+  "docs": "",
+  "website": "https://docs.cosmwasm.com/cw-plus/0.9.0/cw1/cw1-whitelist",
+  "type": "standalone",
+  "icon": "GiTrade",
+  "enabled": true
+}

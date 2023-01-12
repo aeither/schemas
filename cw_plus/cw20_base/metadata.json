@@ -1,0 +1,9 @@
+{
+  "name": "Cw20 Base",
+  "description": "",
+  "docs": "",
+  "website": "https://docs.cosmwasm.com/cw-plus/0.9.0/cw20/spec",
+  "type": "standalone",
+  "icon": "GiTrade",
+  "enabled": true
+}
