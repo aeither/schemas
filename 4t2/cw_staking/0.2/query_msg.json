@@ -23,17 +23,22 @@
       ],
       "properties": {
         "app": {
-          "$ref": "#/definitions/QueryMsg"
+          "$ref": "#/definitions/CwStakingQueryMsg"
         }
       },
       "additionalProperties": false
     }
   ],
   "definitions": {
+    "AssetEntry": {
+      "description": "May key to retrieve information on an asset",
+      "type": "string"
+    },
     "BaseQueryMsg": {
+      "description": "Query api message",
       "oneOf": [
         {
-          "description": "Returns [`AppConfigResponse`]",
+          "description": "Returns [`ApiConfigResponse`].",
           "type": "object",
           "required": [
             "config"
@@ -47,14 +52,22 @@
           "additionalProperties": false
         },
         {
-          "description": "Returns the admin.",
+          "description": "Returns [`TradersResponse`]. TODO: enable pagination",
           "type": "object",
           "required": [
-            "admin"
+            "traders"
           ],
           "properties": {
-            "admin": {
+            "traders": {
               "type": "object",
+              "required": [
+                "proxy_address"
+              ],
+              "properties": {
+                "proxy_address": {
+                  "type": "string"
+                }
+              },
               "additionalProperties": false
             }
           },
@@ -62,63 +75,26 @@
         }
       ]
     },
-    "QueryMsg": {
+    "CwStakingQueryMsg": {
       "oneOf": [
         {
           "type": "object",
           "required": [
-            "state"
+            "info"
           ],
           "properties": {
-            "state": {
-              "type": "object",
-              "additionalProperties": false
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "required": [
-            "config"
-          ],
-          "properties": {
-            "config": {
-              "type": "object",
-              "additionalProperties": false
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "required": [
-            "fee"
-          ],
-          "properties": {
-            "fee": {
-              "type": "object",
-              "additionalProperties": false
-            }
-          },
-          "additionalProperties": false
-        },
-        {
-          "type": "object",
-          "required": [
-            "subscriber_state"
-          ],
-          "properties": {
-            "subscriber_state": {
+            "info": {
               "type": "object",
               "required": [
-                "os_id"
+                "provider",
+                "staking_token"
               ],
               "properties": {
-                "os_id": {
-                  "type": "integer",
-                  "format": "uint32",
-                  "minimum": 0.0
+                "provider": {
+                  "type": "string"
+                },
+                "staking_token": {
+                  "$ref": "#/definitions/AssetEntry"
                 }
               },
               "additionalProperties": false
@@ -129,19 +105,54 @@
         {
           "type": "object",
           "required": [
-            "contributor_state"
+            "staked"
           ],
           "properties": {
-            "contributor_state": {
+            "staked": {
               "type": "object",
               "required": [
-                "os_id"
+                "provider",
+                "staker_address",
+                "staking_token"
               ],
               "properties": {
-                "os_id": {
-                  "type": "integer",
-                  "format": "uint32",
-                  "minimum": 0.0
+                "provider": {
+                  "type": "string"
+                },
+                "staker_address": {
+                  "type": "string"
+                },
+                "staking_token": {
+                  "$ref": "#/definitions/AssetEntry"
+                }
+              },
+              "additionalProperties": false
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "unbonding"
+          ],
+          "properties": {
+            "unbonding": {
+              "type": "object",
+              "required": [
+                "provider",
+                "staker_address",
+                "staking_token"
+              ],
+              "properties": {
+                "provider": {
+                  "type": "string"
+                },
+                "staker_address": {
+                  "type": "string"
+                },
+                "staking_token": {
+                  "$ref": "#/definitions/AssetEntry"
                 }
               },
               "additionalProperties": false
