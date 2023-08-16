@@ -1,0 +1,9 @@
+{
+  "name": "Gas Station",
+  "description": "Manage fee grants from your Account",
+  "website": "https://abstract.money/",
+  "docs": "",
+  "type": "app",
+  "icon": "RiCoinsLine",
+  "enabled": false
+}
