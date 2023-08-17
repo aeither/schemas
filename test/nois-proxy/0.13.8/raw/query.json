@@ -1,0 +1,106 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "QueryMsg",
+  "oneOf": [
+    {
+      "description": "Get the config state",
+      "type": "object",
+      "required": [
+        "config"
+      ],
+      "properties": {
+        "config": {
+          "type": "object",
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Get the prices.",
+      "type": "object",
+      "required": [
+        "prices"
+      ],
+      "properties": {
+        "prices": {
+          "type": "object",
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Get the price in one particular denom. Returns None when denom is not accepted.",
+      "type": "object",
+      "required": [
+        "price"
+      ],
+      "properties": {
+        "price": {
+          "type": "object",
+          "required": [
+            "denom"
+          ],
+          "properties": {
+            "denom": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Queries the local channel ID that is used to request beacons. This channel is unset when the proxy is instantiated and will be set when the channel is created. Once created, the value does not change anymore.",
+      "type": "object",
+      "required": [
+        "gateway_channel"
+      ],
+      "properties": {
+        "gateway_channel": {
+          "type": "object",
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Returns the list of allowed dapp addresses",
+      "type": "object",
+      "required": [
+        "allowlist"
+      ],
+      "properties": {
+        "allowlist": {
+          "type": "object",
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    {
+      "description": "Queries whether the given address is part of the proxy's allowlist. Whether or not the allowlist is enabled must be queried via the config.",
+      "type": "object",
+      "required": [
+        "is_allowlisted"
+      ],
+      "properties": {
+        "is_allowlisted": {
+          "type": "object",
+          "required": [
+            "address"
+          ],
+          "properties": {
+            "address": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

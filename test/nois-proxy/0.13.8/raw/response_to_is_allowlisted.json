@@ -1,0 +1,15 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "IsAllowlistedResponse",
+  "type": "object",
+  "required": [
+    "listed"
+  ],
+  "properties": {
+    "listed": {
+      "description": "Returns true if and only if the address is part of the proxy's allowlist. Whether or not the allowlist is enabled must be queried via the config.",
+      "type": "boolean"
+    }
+  },
+  "additionalProperties": false
+}
