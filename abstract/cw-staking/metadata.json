@@ -3,7 +3,7 @@
   "description": "Stake stake stake",
   "docs": "",
   "website": "https://fortytwo.finance",
-  "type": "api",
+  "type": "adapter",
   "icon": "GiTrade",
   "enabled": true
 }

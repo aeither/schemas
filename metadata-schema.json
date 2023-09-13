@@ -24,7 +24,7 @@
     "description": {
       "type": "string",
       "default": "",
-      "title": "The description Schema",
+      "title": "The description Schema for short descriptions.",
       "examples": [
         "Manage versions of smart-contracts on-chain"
       ]
@@ -45,11 +45,19 @@
         "https://abstract.money"
       ]
     },
+    "readme": {
+      "type": "string",
+      "default": "",
+      "title": "Readme Link",
+      "examples": [
+        "https://raw.githubusercontent.com/AbstractSDK/abstract/main/modules/contracts/adapters/dex/README.md"
+      ]
+    },
     "type": {
       "type": "string",
       "enum": [
         "app",
-        "api",
+        "adapter",
         "native",
         "core",
         "standalone"
@@ -58,7 +66,7 @@
       "title": "Type of module",
       "examples": [
         "app",
-        "api"
+        "adapter"
       ]
     },
     "icon": {
@@ -83,8 +91,9 @@
       "name": "Dex",
       "description": "Interact with multiple dexes",
       "docs": "https://docs.rs/abstract-os/latest/abstract_os/dex/index.html",
+      "readme": "https://raw.githubusercontent.com/AbstractSDK/abstract/main/modules/contracts/adapters/dex/README.md",
       "website": "https://abstract.money",
-      "type": "api",
+      "type": "adapter",
       "icon": "GiTrade",
       "enabled": true
     }
