@@ -7,4 +7,4 @@ This directory is used to generate the init, query, and execute interfaces for c
 3. Ensure that the validate-metadatas action does not fail.
 
 ## Commands
-- `yarn validate-metadatas` - validate all metadatas in this repo
+- `pnpm validate-metadatas` - validate all metadatas in this repo
