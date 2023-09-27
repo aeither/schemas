@@ -43,4 +43,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Validate metadata
-        run: pnpm run validate-metadatas
+        run: pnpm run test

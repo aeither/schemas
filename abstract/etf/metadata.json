@@ -4,5 +4,6 @@
   "docs": "https://docs.abstract.money/tutorials/managed-etf",
   "website": "https://abstract.money",
   "type": "app",
-  "icon": "RiStockLine"
+  "icon": "RiStockLine",
+  "readme": "https://raw.githubusercontent.com/AbstractSDK/abstract/main/modules/contracts/apps/etf/README.md"
 }
