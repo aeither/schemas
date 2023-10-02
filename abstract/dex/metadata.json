@@ -6,5 +6,6 @@
   "type": "adapter",
   "icon": "GiTrade",
   "enabled": true,
+  "category": "DeFi",
   "readme": "https://raw.githubusercontent.com/AbstractSDK/abstract/main/modules/contracts/adapters/dex/README.md"
 }

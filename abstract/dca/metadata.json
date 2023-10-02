@@ -5,6 +5,7 @@
   "docs": "",
   "type": "app",
   "icon": "RiCoinsLine",
-  "enabled": false,
+  "enabled": true,
+  "category": "DeFi",
   "readme": "https://raw.githubusercontent.com/AbstractSDK/abstract/main/modules/contracts/apps/dca/README.md"
 }

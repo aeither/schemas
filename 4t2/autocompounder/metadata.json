@@ -5,5 +5,6 @@
   "website": "https://fortytwo.money",
   "type": "app",
   "icon": "RiStockLine",
+  "category": "DeFi",
   "enabled": true
 }

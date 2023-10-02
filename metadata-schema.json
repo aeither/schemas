@@ -77,6 +77,16 @@
         "GiTrade"
       ]
     },
+    "category": {
+      "type": "string",
+      "default": "",
+      "title": "Category",
+      "examples": [
+        "DeFi",
+        "Social Finance",
+        "Automation"
+      ]
+    },
     "enabled": {
       "type": "boolean",
       "default": false,
